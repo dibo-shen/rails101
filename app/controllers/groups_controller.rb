@@ -50,7 +50,10 @@ class GroupsController < ApplicationController
      @group.destroy
    redirect_to groups_path, alert: "Group deleted"
  end
- end
+
+ @group.destroy
+    redirect_to groups_path, alert: "Group deleted"
+  end
 
  private
 
