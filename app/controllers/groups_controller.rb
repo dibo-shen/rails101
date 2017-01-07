@@ -8,8 +8,8 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
   end
   def edit
-    end
   end
+
   def new
     @group = Group.new
   end
@@ -37,9 +37,7 @@ class GroupsController < ApplicationController
    redirect_to groups_path, alert: "Group deleted"
  end
 
- @group.destroy
-    redirect_to groups_path, alert: "Group deleted"
-  end
+
 
  private
 
@@ -53,6 +51,5 @@ class GroupsController < ApplicationController
 
   def group_params
      params.require(:group).permit(:title, :description)
+     end
    end
-
- end
