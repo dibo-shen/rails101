@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-    before_action :authenticate_user! , only: [:new, :create, :edit, :update, :destroy]]
+    before_action :authenticate_user! , only: [:new, :create, :edit, :update, :destroy]
   def index
     @groups = Group.all
   end
@@ -49,4 +49,5 @@ class GroupsController < ApplicationController
 
      @group.destroy
    redirect_to groups_path, alert: "Group deleted"
+ end
  end
