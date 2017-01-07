@@ -51,3 +51,9 @@ class GroupsController < ApplicationController
    redirect_to groups_path, alert: "Group deleted"
  end
  end
+
+ private
+
+ def group_params
+   params.require(:group).permit(:title, :description)
+ end
